@@ -55,10 +55,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags always come first -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
 
       <title>Weather Scraper</title>
     <!-- Bootstrap CSS -->
@@ -99,6 +96,20 @@
               margin-top:15px;
               
           }
+          #footer {
+	background: #121d1f;
+	color: #7d8384;
+ text-align: center;
+	padding: 30px 0 25px 0;
+}
+#footer p {
+	font-size: 13px;
+}
+#footer a {
+	color: #a0a5a5;
+}
+#footer a:hover {
+	color: #7bc3d1;
          
       </style>
       
@@ -107,14 +118,14 @@
     
       <div class="container">
       
-          <h1 style="color:white;">What's The Weather?</h1>
+          <h1 style="color:white;">Weather Forecast</h1>
           
           
           
           <form>
   <fieldset class="form-group">
     <label for="city"><p style="color:white;">Enter the name of a city.</p></label>
-    <input type="text" class="form-control" name="city" id="city" placeholder="Eg. New York, Tokyo" value = "<?php 
+    <input type="text" class="form-control" name="city" id="city" placeholder="Eg. Kearny, New York" value = "<?php 
 																										   
 																										   if (array_key_exists('city', $_GET)) {
 																										   
@@ -143,12 +154,19 @@
 </div>';
                   
               }
+   
               
               ?></div>
       </div>
+                 <div id="footer">
+  
+    
+      <p> 2019 &copy; Sk Adib Asker</p>
+	  
+    
+  
+</div>
 
-    <!-- jQuery first, then Bootstrap JS. -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+  
   </body>
 </html>
