@@ -1,0 +1,156 @@
+//////////////////////////////////////////////////
+//Name:SK ADIB IBNE ASKER                       //
+//Date:11/06/2014                               //
+//School:Essex county college                   //
+//Professor: Rabie, Mohammad.                   //
+//Description: Create a small C++ program that  // 
+//             gives the roots that  solves the //
+//             Quadratic Equation using:        //
+//             x1=(-b + sqrt(b^2-4a*c))/2*a     //
+//             x2=(-b - sqrt(b^2-4a*c))/2*a     //         
+//////////////////////////////////////////////////
+
+#include <iostream>
+using namespace std;
+/////////////////////////////////////
+//This is called functions prototypes
+void display();
+void equation(int &x,int &y, int &z);
+void check(int &x, int &y, int &z);
+int main()
+{
+	int a, b, c;
+	//The main contains this function calls display and quadratic_equation
+
+	display();
+	equation(a,b,c);
+	check(a, b, c);
+	return 0;
+}
+//This function is called display and this is the function name
+void display()
+{
+	//show in the screen that This program solves the Quadratic Eqauation
+	cout << "This program solves the Quadratic Eqauation." << endl;
+	cout << "............................................" << endl;
+
+}
+//This function is called  quadratic_equation  and this is the function name
+void equation(int &x, int &y, int &z)
+{
+	// Declaraton 
+
+	//1.Ask the user to enter the 
+	//quadratic coefficient a.
+	cout << "Please enter the quadratic coefficient 'a' :";
+	//capture that in an integer variable a
+	cin >> x;
+	//2.Ask the user to enter the 
+	//linear coefficient b.
+	cout << "Please enter the linear coefficient 'b' :";
+	//capture that in an integer variable b
+	cin >> y;
+	//3.Ask the user to enter the 
+	//constant c.
+	cout << "Please enter the constant 'c' :";
+	//capture that in an integer variable c
+	cin >> z;
+	// a new line
+	cout << "\n\n" << endl;
+	// Now the program will display the equation x^2+bx+c
+	cout << "\t\tThe equation is  = ax^2+bx+c" << endl;
+	cout << endl;
+	cout << "\t\t\t\t = " << x << "x^2+" << y << "x+" << z << endl;
+}
+
+void check(int &x, int &y, int &z)
+{
+	double root1,root2;
+	//Check if (4 * a*c < b*b) so there will 
+	//be no solution for this equation
+	if (4 * x*z > y*y)
+	{
+
+		cout << "No solution for this equation." << endl;
+	}
+
+
+	else
+	{//starts here
+
+		//-------------------------------------------//
+		//1.display root#1 =(-b+sqrt(b^2-4*a*c))/2*a.//
+		//-------------------------------------------//
+		cout << "\t\troot #1 :(" << -y << "+" << "sqrt("
+			<< y*y << "-" << "4*" << x << "*" << z
+			<< "))/" << 2 * x << "\n" << endl;
+
+		//-------------------//
+		//2.calculate root #1//
+		//-------------------//
+		root1 = (-y + sqrt(y*y - 4 * x*z)) / 2 * x;
+
+		//..............................//
+		//3.display the result of root#1//
+		//------------------------------//
+		cout << "\t\troot #1 (x1) = " << root1 << endl;
+
+
+		//4.creat a new line for gap //
+		cout << "\n" << endl;
+
+		//-------------------------------------------//
+		//5.display root#2 =(-b-sqrt(b^2-4*a*c)/2*a  //
+		//-------------------------------------------//
+		cout << "\t\troot #2 :(" << -y << "-" << "sqrt("
+			<< y*y<< "-" << "4*" << x<< "*" << z
+			<< "))/" << 2 *x << "\n" << endl;
+
+		//-------------------//
+		//6.calculate root #2//
+		//-------------------//
+		root2 = (-y - sqrt(y*y - 4 * x*z)) / 2 * x;
+
+		//------------------------------//
+		//7.display the result of root#2//
+		//------------------------------//
+		cout << "\t\troot #2 (x2)= " << root2 << endl;
+
+	
+	}
+
+}
+/*
+	{
+	//Check if (4 * a*c < b*b) so there will 
+	//be no solution for this equation
+	if (4 * a*c < b*b)
+		cout << "No solution for this equation." << endl;
+	//otherwise it will execute this program
+	else if (4 * a*c > b*b)
+		//Calculate the sqrt (b^2 – 4*a*c)
+		calculation = sqrt(b*b - 4 * a*c);
+	//1.display root#1 =(-b+sqrt(b^2-4*a*c)/2*a
+	cout << "\t\t\troot #1 :(" << -b << "+" << "sqrt("
+		<< b*b << "-" << "4*" << a << "*" << c
+		<< "))/" << 2 * a << "\n" << endl;
+	//creat a new line
+	cout << "\n" << endl;
+	//2.display root#2 =(-b-sqrt(b^2-4*a*c)/2*a
+	cout << "\t\t\troot #2 :(" << -b << "-" << "sqrt("
+		<< b*b << "-" << "4*" << a << "*" << c
+		<< "))/" << 2 * a << "\n" << endl;
+	//3.calculate root #1
+	root1 = (-b + sqrt(b*b - 4 * a*c)) / 2 * a;
+	//4.display the result of root#1
+	cout << "root #1 = " << root1 << endl;
+	//5.calculate root #2
+	root2 = (-b - sqrt(b*b - 4 * a*c)) / 2 * a;
+	//6.display the result of root#2
+	cout << "root #2 = " << root2 << endl;
+
+
+}
+ 
+ 
+ */

@@ -1,0 +1,107 @@
+//////////////////////////////////////////////
+//Name:SK ADIB IBNE ASKER                   //
+//Date:09/26/2014                           //
+//School:Essex county college               //
+//Description: Create a small C++ program   //
+//             that show the grade letter   //
+//             of test                      //
+//////////////////////////////////////////////
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	//declaration
+	double math, csc, eng, phy, average;
+	char grade1, grade2, grade3, grade4, grade5;
+
+	//prompt the user to enter grade1
+	cout << "Enter your first test grade :";
+	cin >> math;
+	cout << endl;
+	//grade for math
+	if (math >= 90)
+		grade1 = 'A';
+	if (math >= 80 && math < 90)
+		grade1 = 'B';
+	if (math >= 70 && math < 80)
+		grade1 = 'C';
+	if (math >= 60 && math < 70)
+		grade1 = 'D';
+	if (math >= 50 && math < 60)
+		grade1 = 'F';
+	//prompt the user to enter grade2
+	cout << "Enter your second test grade :";
+	cin >> csc;
+	cout << endl;
+	//grade for math
+	if (csc >= 90)
+		grade2 = 'A';
+	if (csc >= 80 && csc< 90)
+		grade2 = 'B';
+	if (csc >= 70 && csc < 80)
+		grade2 = 'C';
+	if (csc >= 60 && csc < 70)
+		grade2 = 'D';
+	if (csc >= 50 && csc < 60)
+		grade2 = 'F';
+	//prompt the user to enter grade3
+	cout << "Enter your third test grade :";
+	cin >> eng;
+	cout << endl;
+	//grade for eng
+	if (eng >= 90)
+		grade3 = 'A';
+	if (eng >= 80 && eng< 90)
+		grade3 = 'B';
+	if (eng >= 70 && eng < 80)
+		grade3 = 'C';
+	if (eng >= 60 && eng < 70)
+		grade3 = 'D';
+	if (eng >= 50 && eng < 60)
+		grade3 = 'F';
+	//prompt the user to enter grade4
+	cout << "Enter your fourth test grade :";
+	cin >> phy;
+	cout << endl;
+	//grade for phy
+	if (phy >= 90)
+		grade4 = 'A';
+	if (phy >= 80 && phy< 90)
+		grade4 = 'B';
+	if (phy >= 70 && phy < 80)
+		grade4 = 'C';
+	if (phy >= 60 && phy < 70)
+		grade4 = 'D';
+	if (phy >= 50 && phy< 60)
+		grade4 = 'F';
+	//prompt average
+	average = (math + csc + eng + phy) / 4;
+	//grade for average
+	if (average >= 90)
+		grade5 = 'A';
+	if (average >= 80 && average< 90)
+		grade5 = 'B';
+	if (average >= 70 && average < 80)
+		grade5 = 'C';
+	if (average >= 60 && average < 70)
+		grade5 = 'D';
+	if (average >= 50 && average< 60)
+		grade5 = 'F';
+	cout << endl;
+	//sample output
+	cout << "Course" << "\t" << "Grade" << "\t" << "Letter grade" << endl;
+	cout << "Math" << "\t" << math << "\t" << grade1 << endl;
+	cout << "CSC" << "\t" << csc << "\t" << grade2 << endl;
+	cout << "ENG" << "\t" << eng << "\t" << grade3 << endl;
+	cout << "PHY" << "\t" << phy << "\t" << grade4 << endl;
+	cout << "Average" << "\t" << average << "\t" << grade5 << endl;
+	cout << endl;
+	//prompt the user about pass or fail
+	if (average <= 69)
+		cout << "Sorry You Failed";
+	if (average >= 70)
+		cout << "Congratulation You Passed";
+
+	return 0;
+}

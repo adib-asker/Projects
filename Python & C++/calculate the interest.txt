@@ -1,0 +1,77 @@
+
+///////////////////////////////////////////////////////////////////////////////////
+//Name:Sk adib ibne asker
+//Date:09//15/2014
+//Course:CSC 121
+//School:Essex county college
+//Description: a small project that can
+//             calculate the interest of
+//             a deposit over the course
+//             of 5 years and apr is given 4%
+////////////////////////////////////////////////////////////////////////////////////
+#include <iostream>
+using namespace std;
+int main()
+{
+	// variable declaration
+	int APR, Balance, a, b, c, d, e, Day, Month, Year, T;
+
+	//variable initialization
+	APR = 1.04;
+    Balance = 0.0;
+	a = 0;
+	b = 0;
+	c = 0;
+	d = 0;
+	e = 0;
+	Day = 0;
+	Month = 0;
+    Year = 0;
+	T = 0;
+	
+	//Prompt the user to enter the balance
+	cout << "Enter the Balance :";
+	//capture the key board stroks in balance
+	cin >> Balance;
+	
+	//we know the rate is 4%
+	cout << "Rate :4%" << endl;
+	
+	//Prompt the user to enter the day
+	cout << "Day :";
+	//capture the key board stroks in day
+	cin >> Day;
+	
+	//Prompt the user to enter the month
+	cout << "Month : ";
+	//capture the key board stroks in month
+	cin >> Month;
+
+	//Prompt the user to enter the year
+	cout << "Year : ";
+	//capture the key board stroks in year
+	cin >> Year;
+	
+	//calculate the interest of a deposit
+	a = Balance*pow((1.04), (T + 1));
+	b = Balance*pow((1.04),(T+2));
+	c = Balance*pow((1.04), (T+3));
+	d = Balance*pow((1.04), (T+4));
+	e= Balance*pow((1.04), (T+5));
+
+	//it makes a new line
+	cout << "\n";
+	//design a out put report
+	cout << "Date \t     Balance\t APR" << endl;
+	cout << "----------------------------" << endl;
+	
+	cout << Day<< "/" << Month <<"/" << Year <<"\t"  << Balance <<"\t"       << "4%" << endl;
+	cout << Day <<"/" << Month<<"/"  << Year + 1 <<"\t"     << a <<"\t"            << "4%" << endl;
+	cout << Day <<"/"<< Month <<"/"<< Year + 2  <<"\t" << b<<"\t" << "4%" << endl;
+	cout << Day <<"/" << Month<<"/"  << Year + 3 <<"\t"       << c <<"\t"            << "4%" << endl;
+	cout << Day<<"/"  << Month<<"/"   << Year + 4 <<"\t"       << d<<"\t"             << "4%" << endl;
+	cout << Day<<"/"<< Month<<"/"   << Year + 5 <<"\t"        << e <<"\t"            << "4%" << endl;
+
+
+	return 0;
+}

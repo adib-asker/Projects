@@ -1,0 +1,55 @@
+///////////////////////////////////////////
+//Name:Sk adib ibne asker
+//Date:09//11/2014
+//Course:CSC 121
+//School:Essex county college
+//Description: a small project the number
+//             of coins found in your car
+//
+
+//include library files
+
+#include <iostream>
+using namespace std;
+int main()
+{   
+	//declaration
+	int quarters, dimes, nickles,pennies;
+	double result;
+
+	//1. ask the user to enter the number of
+	//quarters
+	cout<<"Enter the number of quarters : ";
+	cin>>quarters;
+
+        //2. ask the user to enter the number of
+	//dimes
+	cout<<"Enter the number of dimes : ";
+	cin>>dimes;
+
+        //3. ask the user to enter the number of
+	//nickles
+	cout<<"Enter the number of nickles : ";
+	cin>>nickles;
+
+	//4. ask the user to enter the number of
+	//pennies
+	cout<<"Enter the number of pennies : ";
+	cin>>pennies;
+
+	//design a out put report
+	cout<<"Coin Type\t Count\t Value\t "<<endl;
+	cout<<"-----------------------------"<<endl;
+        cout<<"Quarters \t"<<quarters<<0.25*quarters<<endl;
+	cout<<"Dimes\t\t"<<dimes<<0.10*dimes;
+        cout<<"\nNickles\t"<<nickles<<"\t"<<0.05*nickles<<endl;
+	cout<<"Pennies\t"<<pennies<<"\t"<<0.01* pennies<<endl;
+	result=0.25*quarters+0.10*dimes+0.05*nickles+0.01* pennies;
+        cout<<"The total is :"<<result;
+
+
+
+
+        return 0;
+}
+

@@ -1,0 +1,41 @@
+///////////////////////////////////////////
+//Name:Sk adib ibne asker
+//Date:09//12/2014
+//Course:CSC 121
+//School:Essex county college
+//Description: a small project that can
+//               evalute Sphare volume.
+//////////////////////////////////////////
+
+#include <iostream>
+using namespace std;
+int main()
+{
+	//variable definition
+	int radias, Volume;
+	double result;
+	//variable initialization
+	radias = 0;
+
+	//prompt the user to enter the radias
+	cout << "Enter the radias : ";
+	cin >> radias;
+	
+	
+	//we know that PI = 3.1416;
+	//we know that Sphare volume is = (4 / 3)*PI*radias*radias*radias;
+
+	result = (1.3333333)*(3.1416)*(radias*radias*radias);
+	cout << "Sphare Volume is  : " << result;
+
+
+
+
+
+
+
+
+
+
+	return 0;
+}
